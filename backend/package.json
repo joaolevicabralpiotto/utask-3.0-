@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Backend do projeto uTask 3.0",
+  "description": "projeto uTask 3.0",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "joao levi cabral piotto",
   "license": "ISC",
   "dependencies": {
     "fastify": "^5.8.5"

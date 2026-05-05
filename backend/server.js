@@ -1,13 +1,18 @@
 const fastify = require('fastify')({ logger: true })
 
-fastify.get('/status', async (request, reply) => {
-  return { status: 'Operacional', projeto: 'uTask 3.0' }
+
+ fastify.get('/', async () => {
+  return { message: 'uTask 3.0 API - Online', version: '1.0.0' }
+ })
+
+
+fastify.get('/status', async () => {
+  return { status: 'ok' }
 })
 
 const start = async () => {
   try {
-    await fastify.listen({ port: 3000 })
-    console.log("🚀 Servidor rodando em http://localhost:3000")
+    await fastify.listen({ port: 3000, host: '0.0.0.0' })
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)
